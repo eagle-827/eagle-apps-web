@@ -435,3 +435,9 @@ a {
     margin: 0 auto;
   }
 }
+
+@media (max-width: 760px) {
+  .hero-art {
+    margin-top: -38px;
+  }
+}
