@@ -492,3 +492,331 @@ a {
     font-size: 22px;
   }
 }
+
+/* =========================================================
+   ABOUT EAGLE
+   ========================================================= */
+
+.about-page {
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.about-brand {
+  color: var(--ink);
+  font-family: var(--font-caveat), cursive;
+  font-size: 27px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.main-nav a.active {
+  position: relative;
+}
+
+.main-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  bottom: -8px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--rose);
+}
+
+.about-intro {
+  width: min(1120px, 89%);
+  margin: 0 auto;
+  padding: 72px 0 66px;
+}
+
+.about-copy {
+  position: relative;
+}
+
+.about-copy h1 {
+  margin: 0 0 26px;
+  font-family: var(--font-caveat), Georgia, serif;
+  font-size: clamp(54px, 6vw, 78px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.about-copy h1 span {
+  color: var(--rose);
+}
+
+.about-identity {
+  margin: 0 0 34px;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.75;
+}
+
+.about-story-text {
+  max-width: 100%;
+  color: #594d48;
+  font-size: 18px;
+  line-height: 2.05;
+}
+
+.about-story-text p {
+  width: 58%;
+  margin: 0 0 22px;
+}
+
+.about-photo-mobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 34%;
+  aspect-ratio: 3 / 4;
+  margin: 0;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 34px 34px 100px 34px;
+  background: #f0dfd6;
+}
+
+.about-photo-mobile img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-life {
+  width: min(1120px, 89%);
+  margin: 0 auto;
+  padding: 12px 0 74px;
+}
+
+.about-life h2 {
+  margin: 0 0 32px;
+  font-family: Georgia, serif;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.life-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.life-item {
+  min-height: 110px;
+  padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  text-align: center;
+}
+
+.life-icon-image {
+  width: 92px;
+  height: 92px;
+  display: block;
+  object-fit: contain;
+}
+
+.life-item strong {
+  font-size: 15px;
+}
+
+.about-wish {
+  width: min(1120px, 89%);
+  min-height: 300px;
+  margin: 0 auto 76px;
+  padding: 42px 52px;
+  border-radius: 36px;
+  background: #f4e6de;
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-wish-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.quote-mark {
+  display: block;
+  height: 40px;
+  color: #c78370;
+  font-family: Georgia, serif;
+  font-size: 72px;
+  line-height: 0.9;
+}
+
+.about-wish-copy p {
+  margin: 14px 0 0;
+  font-family: var(--font-caveat), Georgia, serif;
+  font-size: 36px;
+  line-height: 1.5;
+}
+
+.about-wish-art {
+  min-height: 210px;
+  display: grid;
+  place-items: center;
+  color: #b89788;
+  font-family: var(--font-caveat), cursive;
+  font-size: 20px;
+}
+
+.about-footer {
+  position: relative;
+}
+
+@media (max-width: 760px) {
+  .about-header .about-brand {
+    display: none;
+  }
+
+  .about-intro {
+    width: auto;
+    margin: 0 28px;
+    padding: 46px 0 48px;
+  }
+
+  .about-copy h1 {
+    margin-bottom: 24px;
+    font-size: clamp(37px, 10.5vw, 44px);
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+    white-space: nowrap;
+  }
+
+  .about-identity {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .about-story-text {
+    font-size: 16px;
+    line-height: 1.9;
+  }
+
+  .about-story-text p {
+    width: 100%;
+    margin-bottom: 22px;
+  }
+
+  .about-copy {
+    position: relative;
+  }
+
+  .about-story-text {
+    position: relative;
+  }
+
+  .about-photo-mobile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 43%;
+    aspect-ratio: 3 / 4;
+    margin: 0;
+    border-radius: 22px 22px 58px 22px;
+  }
+
+  .about-story-text > p:nth-of-type(1),
+  .about-story-text > p:nth-of-type(2) {
+    width: 52%;
+  }
+
+  .about-photo-mobile + p {
+    padding-top: 18px;
+    clear: both;
+  }
+
+  .about-life {
+    width: auto;
+    margin: 0 24px;
+    padding: 8px 0 54px;
+  }
+
+  .about-life h2 {
+    margin: 0 8px 24px;
+    font-size: 29px;
+  }
+
+  .life-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
+  }
+
+  .life-item {
+    min-height: 90px;
+    padding: 10px 2px;
+    gap: 9px;
+  }
+
+  .life-icon-image {
+    width: 78px;
+    height: 78px;
+  }
+
+  .life-item strong {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .about-wish {
+    width: auto;
+    min-height: 230px;
+    margin: 0 24px 48px;
+    padding: 28px 26px;
+    border-radius: 28px;
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+
+  .quote-mark {
+    height: 30px;
+    font-size: 58px;
+  }
+
+  .about-wish-copy p {
+    margin-top: 10px;
+    font-size: 27px;
+    line-height: 1.5;
+  }
+
+  .about-wish-art {
+    min-height: 170px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 390px) {
+  .about-copy h1 {
+    font-size: 37px;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-photo {
+    margin-top: -155px;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-hero {
+    padding-top: 42px;
+  }
+
+  .about-photo {
+    margin-top: 0;
+    transform: translateY(-225px);
+  }
+}
