@@ -23,13 +23,9 @@ export default function Home() {
           <p className="eyebrow">Apps by Eagle</p>
 
           <h1>
-            把生活裡
+            讓生活簡單一點，
             <br />
-            「要是有個 App 就好了」
-            <br />
-            的瞬間，
-            <br />
-            真的做出來。
+            也可愛一點。
           </h1>
 
           <p className="hero-intro">
