@@ -976,3 +976,78 @@ a {
     padding-top: 18px;
   }
 }
+
+@font-face {
+  font-family: "ChenYuLuoYan";
+  src: url("/fonts/ChenYuluoyan-2.0-Thin.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.about-title-zh,
+.about-life h2,
+.about-wish-copy p {
+  font-family: "ChenYuLuoYan", "PingFang TC", sans-serif;
+  font-weight: 400;
+}
+
+.about-hi,
+.about-eagle {
+  font-weight: 400;
+  font-size: 0.92em;
+  letter-spacing: -0.02em;
+}
+
+.about-title-zh {
+  font-size: 1em;
+  letter-spacing: 0.02em;
+}
+
+.about-identity {
+  font-family: "ChenYuLuoYan", "PingFang TC", sans-serif;
+  font-weight: 400;
+}
+
+@media (max-width: 760px) {
+  .about-life h2 {
+    margin-bottom: 8px;
+  }
+
+  .life-grid {
+    margin-top: 0;
+  }
+
+  .about-photo-group {
+    right: -2%;
+  }
+}
+
+.about-heart {
+  font-family: "ChenYuLuoYan", var(--font-caveat), cursive;
+  font-weight: 400;
+}
+
+@media (max-width: 760px) {
+  .about-eagle {
+    margin-left: -0.10em;
+  }
+
+  .about-identity {
+    font-size: 20px;
+  }
+
+  .about-photo-group .about-signature {
+    transform: translateX(14px) rotate(-2deg);
+  }
+}
+
+@media (max-width: 760px) {
+  .about-eagle {
+    margin-left: -0.22em;
+  }
+
+  .about-identity {
+    font-size: 24px;
+  }
+}

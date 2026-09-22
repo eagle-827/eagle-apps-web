@@ -22,7 +22,7 @@ export default function AboutPage() {
         <div className="about-copy">
           <h1>
             <span className="about-hi">Hi，</span><span className="about-title-zh">我是</span>{" "}
-            <span className="about-eagle">Eagle</span> <span className="about-heart">♡</span>
+            <span className="about-eagle">eagle</span>
           </h1>
 
           <p className="about-identity">
@@ -39,7 +39,7 @@ export default function AboutPage() {
             <p>
               我懷孕準備待產包時，
               <br />
-              老公居然常常忘記東西放在哪裡，
+              老公經常忘記東西放哪裡
               <br />
               找不到就索性再買一次。
             </p>
@@ -77,7 +77,7 @@ export default function AboutPage() {
             <p>
               我期待，我能用 App
               <br />
-              讓生活一點一點變得更美好。
+              讓生活一點一點變得更美好♡
             </p>
           </div>
         </div>
@@ -116,7 +116,7 @@ export default function AboutPage() {
           <p>
             期待生活能
             <br />
-            愈來愈美好 ♡
+            愈來愈美好
           </p>
         </div>
 
