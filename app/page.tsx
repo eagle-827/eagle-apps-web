@@ -52,17 +52,15 @@ export default function Home() {
 
       <section className="app-strip" aria-label="Eagle Apps">
         {[
-          ["🏠", "Home", "家庭神器"],
-          ["⏰", "Get Ready", "出門神器"],
-          ["🍼", "Baby", "寶寶記錄"],
-          ["🍳", "Cook", "料理助手"],
-          ["🐱", "Arrow Bar", "益智遊戲"],
-          ["🔤", "Word Search", "文字遊戲"],
-        ].map(([icon, name, description]) => (
+          ["/images/apps/home.webp", "家庭神器"],
+          ["/images/apps/get-ready.webp", "出門神器"],
+          ["/images/apps/baby.webp", "爸媽神器"],
+          ["/images/apps/arrow-bar.webp", "Arrow Bar"],
+          ["/images/apps/word-search.webp", "Word Search"],
+        ].map(([icon, name]) => (
           <div className="mini-app" key={name}>
-            <div className="mini-app-icon">{icon}</div>
+            <img className="mini-app-icon" src={icon} alt="" />
             <strong>{name}</strong>
-            <span>{description}</span>
           </div>
         ))}
       </section>
