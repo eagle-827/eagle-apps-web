@@ -1,26 +1,410 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #fff9f5;
+  --paper-deep: #f9eee8;
+  --ink: #332a27;
+  --muted: #786a64;
+  --rose: #d98f89;
+  --rose-light: #f4d3cf;
+  --line: #eadbd3;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--paper);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(242, 204, 197, 0.22), transparent 26rem),
+    radial-gradient(circle at 10% 90%, rgba(226, 220, 177, 0.16), transparent 25rem),
+    var(--paper);
+  color: var(--ink);
+  font-family: Arial, "PingFang TC", "Noto Sans TC", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-shell {
+  width: min(100%, 1440px);
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.site-header {
+  height: 86px;
+  padding: 0 5.5%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  border-bottom: 1px solid rgba(234, 219, 211, 0.75);
+}
+
+.brand {
+  justify-self: start;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: -0.7px;
+}
+
+.brand span {
+  font-style: normal;
+  font-size: 18px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  font-size: 14px;
+}
+
+.main-nav a:first-child {
+  border-bottom: 2px solid var(--ink);
+  padding: 32px 2px 7px;
+}
+
+.follow-button {
+  justify-self: end;
+  padding: 11px 20px;
+  border-radius: 999px;
+  background: var(--rose);
+  color: white;
+  font-size: 14px;
+  box-shadow: 0 5px 16px rgba(166, 102, 95, 0.12);
+}
+
+.hero {
+  min-height: 650px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  padding: 58px 7% 35px;
+}
+
+.hero-copy {
+  padding-left: 4%;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  margin: 0 0 15px;
+  color: var(--rose);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 600px;
+  margin: 0;
+  font-family: "Kaiti TC", "STKaiti", "DFKai-SB", serif;
+  font-size: clamp(44px, 4.3vw, 68px);
+  font-weight: 600;
+  line-height: 1.34;
+  letter-spacing: 0.025em;
+}
+
+.hero-intro {
+  margin: 30px 0 27px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 112px;
+  height: 43px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: var(--rose);
+  color: white;
+  font-size: 14px;
+  box-shadow: 0 6px 18px rgba(166, 102, 95, 0.15);
+}
+
+.hero-art {
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.art-placeholder {
+  width: min(100%, 570px);
+  aspect-ratio: 1 / 0.88;
+  border: 1.5px dashed #dec8bd;
+  border-radius: 44% 56% 46% 54% / 55% 43% 57% 45%;
+  background: rgba(255, 255, 255, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #bca49a;
+}
+
+.art-placeholder span {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  font-style: italic;
+}
+
+.art-placeholder small {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.app-strip {
+  margin: 0 5.5%;
+  padding: 28px 4% 30px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.mini-app {
+  text-align: center;
+  font-size: 12px;
+}
+
+.mini-app-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 10px;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  background: #f8e8df;
+  display: grid;
+  place-items: center;
+  font-size: 27px;
+}
+
+.mini-app strong,
+.mini-app span {
+  display: block;
+}
+
+.mini-app strong {
+  font-size: 12px;
+}
+
+.mini-app span {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.home-footer {
+  padding: 0 5.5% 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted);
+  font-family: Georgia, serif;
+  font-size: 12px;
+}
+
+.home-footer span:first-child {
+  color: var(--ink);
+  font-size: 14px;
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    height: 68px;
+    padding: 0 20px;
+    grid-template-columns: 1fr auto;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .brand {
+    font-size: 20px;
+  }
+
+  .follow-button {
+    padding: 9px 15px;
+    font-size: 12px;
+  }
+
+  .hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    padding: 55px 25px 25px;
+  }
+
+  .hero-copy {
+    padding: 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 11vw, 52px);
+  }
+
+  .hero-art {
+    min-height: auto;
+    padding: 42px 0 20px;
+  }
+
+  .art-placeholder {
+    width: 90%;
+  }
+
+  .app-strip {
+    margin: 0 18px;
+    padding: 26px 0;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 25px;
+  }
+
+  .mini-app-icon {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+/* =========================================================
+   MOBILE FIRST POLISH — 390px
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .site-shell {
+    width: 100%;
+    min-height: 100svh;
+  }
+
+  .site-header {
+    height: 62px;
+    padding: 0 18px;
+    grid-template-columns: 1fr auto;
+    background: rgba(255, 249, 245, 0.92);
+  }
+
+  .brand {
+    font-size: 19px;
+    letter-spacing: -0.5px;
+  }
+
+  .brand span {
+    font-size: 14px;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .follow-button {
+    padding: 8px 13px;
+    font-size: 11px;
+  }
+
+  .hero {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 42px 24px 18px;
+  }
+
+  .hero-copy {
+    padding: 0;
+  }
+
+  .eyebrow {
+    margin-bottom: 13px;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+  }
+
+  .hero h1 {
+    max-width: 330px;
+    font-size: 36px;
+    line-height: 1.34;
+    letter-spacing: 0.01em;
+  }
+
+  .hero-intro {
+    margin: 22px 0 19px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .primary-button {
+    min-width: 96px;
+    height: 38px;
+    padding: 0 17px;
+    font-size: 12px;
+  }
+
+  .hero-art {
+    min-height: 0;
+    padding: 30px 0 10px;
+  }
+
+  .art-placeholder {
+    width: min(100%, 330px);
+    margin: 0 auto;
+    aspect-ratio: 1 / 0.78;
+  }
+
+  .art-placeholder span {
+    font-size: 18px;
+  }
+
+  .art-placeholder small {
+    font-size: 11px;
+  }
+
+  .app-strip {
+    margin: 12px 18px 0;
+    padding: 27px 4px 24px;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 25px;
+  }
+
+  .mini-app-icon {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 8px;
+    border-radius: 16px;
+    font-size: 25px;
+  }
+
+  .mini-app strong {
+    font-size: 11px;
+  }
+
+  .mini-app span {
+    font-size: 9px;
+  }
+
+  .home-footer {
+    padding: 13px 20px 30px;
+    gap: 4px;
+    font-size: 10px;
+  }
+
+  .home-footer span:first-child {
+    font-size: 12px;
+  }
 }
