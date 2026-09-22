@@ -45,11 +45,12 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="hero-art" aria-label="Eagle 與綿花糖主視覺預留位置">
-          <div className="art-placeholder">
-            <span>Hero illustration</span>
-            <small>Eagle ＋ 綿花糖</small>
-          </div>
+        <div className="hero-art" aria-label="Eagle 與綿花糖">
+          <img
+            className="hero-illustration"
+            src="/images/eagle-hero.png"
+            alt="Eagle 與綿花糖在創作桌前"
+          />
         </div>
       </section>
 

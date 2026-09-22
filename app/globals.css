@@ -408,3 +408,30 @@ a {
     font-size: 12px;
   }
 }
+
+/* =========================================================
+   HERO ILLUSTRATION
+   ========================================================= */
+
+.hero-illustration {
+  display: block;
+  width: min(100%, 620px);
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 760px) {
+  .hero-art {
+    width: calc(100% + 28px);
+    margin-left: -14px;
+    padding: 18px 0 0;
+    overflow: visible;
+  }
+
+  .hero-illustration {
+    width: 100%;
+    max-width: 390px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
