@@ -2,10 +2,6 @@ export default function Home() {
   return (
     <main className="site-shell">
       <header className="site-header">
-        <a className="brand" href="/">
-          Eagle <span>🪽</span>
-        </a>
-
         <nav className="main-nav" aria-label="主要導覽">
           <a href="/apps">Apps</a>
           <a href="/about">關於我</a>
@@ -29,11 +25,11 @@ export default function Home() {
           </h1>
 
           <p className="hero-intro">
-            Hi，我是 Eagle 🪽
+            我是 依糕 Eagle 🪽
             <br />
             一個喜歡把日常變成可愛工具的
             <br />
-            獨立創作者。
+            創作者。
           </p>
 
           <a className="primary-button" href="/apps">
