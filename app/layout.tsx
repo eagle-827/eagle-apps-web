@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
+import { Caveat } from "next/font/google";
 import "./globals.css";
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  variable: "--font-caveat",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Apps by Eagle",
-  description: "把生活裡「要是有個 App 就好了」的瞬間，真的做出來。",
+  description: "讓生活簡單一點，也可愛一點。Apps by Eagle — 依糕 Eagle 的 App 創作。",
 };
 
 export default function RootLayout({
@@ -13,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-Hant">
-      <body>{children}</body>
+      <body className={caveat.variable}>{children}</body>
     </html>
   );
 }

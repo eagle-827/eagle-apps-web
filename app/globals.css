@@ -441,3 +441,54 @@ a {
     margin-top: -38px;
   }
 }
+
+/* Homepage finishing details */
+.home-footer {
+  position: relative;
+}
+
+.home-footer span:first-child {
+  font-family: var(--font-caveat), cursive;
+  font-weight: 500;
+}
+
+.home-footer::after {
+  content: "🐾";
+  position: absolute;
+  right: 6%;
+  bottom: 28px;
+  font-family: sans-serif;
+  font-size: 24px;
+  opacity: 0.55;
+  transform: rotate(-12deg);
+}
+
+@media (max-width: 760px) {
+  .app-strip {
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 6px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .mini-app-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+  }
+
+  .mini-app strong {
+    font-size: 9px;
+    white-space: nowrap;
+  }
+
+  .home-footer span:first-child {
+    font-size: 18px;
+  }
+
+  .home-footer::after {
+    right: 22px;
+    bottom: 27px;
+    font-size: 22px;
+  }
+}
