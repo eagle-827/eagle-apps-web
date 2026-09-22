@@ -820,3 +820,159 @@ a {
     transform: translateY(-225px);
   }
 }
+
+.about-title-zh,
+.about-life h2,
+.about-wish-copy p {
+  font-family: "Klee One", "Hannotate TC", "HanziPen TC", "PingFang TC", cursive;
+  font-weight: 500;
+}
+
+.about-hi,
+.about-eagle {
+  font-family: var(--font-caveat), cursive;
+}
+
+.about-heart {
+  color: var(--rose);
+  font-family: var(--font-caveat), cursive;
+}
+
+.about-signature {
+  position: absolute;
+  top: 360px;
+  right: 3%;
+  width: 27%;
+  color: #c77f70;
+  font-family: var(--font-caveat), "HanziPen TC", cursive;
+  font-size: 25px;
+  line-height: 1.35;
+  transform: rotate(-2deg);
+}
+
+@media (max-width: 760px) {
+  .about-intro {
+    padding-top: 28px;
+  }
+
+  .about-copy h1 {
+    margin-bottom: 10px;
+  }
+
+  .about-identity {
+    margin-bottom: 24px;
+  }
+
+  .about-photo-mobile {
+    top: -22px;
+    width: 38%;
+  }
+
+  .about-story-text > p:nth-of-type(1),
+  .about-story-text > p:nth-of-type(2) {
+    width: 57%;
+  }
+
+  .about-signature {
+    top: 275px;
+    right: 0;
+    width: 38%;
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .about-life h2 {
+    font-size: 36px;
+    font-weight: 500;
+  }
+
+  .about-wish-copy p {
+    font-size: 31px;
+    font-weight: 500;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-photo-mobile {
+    top: -38px;
+  }
+
+  .about-signature {
+    top: 235px;
+    right: 0;
+    width: 38%;
+    font-size: 17px;
+    line-height: 1.28;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-signature {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 38%;
+    margin: -6px 0 34px auto;
+    font-size: 17px;
+    line-height: 1.28;
+    transform: rotate(-2deg);
+  }
+
+  .about-signature + p {
+    clear: both;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-signature {
+    position: absolute;
+    top: 285px;
+    right: 0;
+    width: 38%;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.25;
+    transform: rotate(-2deg);
+  }
+
+  .about-signature + p {
+    clear: both;
+    padding-top: 18px;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-photo-group {
+    position: absolute;
+    top: -38px;
+    right: 0;
+    width: 38%;
+  }
+
+  .about-photo-group .about-photo-mobile {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    margin: 0;
+  }
+
+  .about-photo-group .about-signature {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    margin: 10px 0 0;
+    font-size: 16px;
+    line-height: 1.25;
+    transform: rotate(-2deg);
+  }
+
+  .about-photo-group + p {
+    clear: both;
+    padding-top: 18px;
+  }
+}

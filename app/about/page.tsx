@@ -21,11 +21,11 @@ export default function AboutPage() {
       <section className="about-intro">
         <div className="about-copy">
           <h1>
-            Hi，我是 Eagle <span>♡</span>
+            <span className="about-hi">Hi，</span><span className="about-title-zh">我是</span>{" "}
+            <span className="about-eagle">Eagle</span> <span className="about-heart">♡</span>
           </h1>
 
           <p className="about-identity">
-                        <br />
             香港移民台灣的女生
           </p>
 
@@ -44,11 +44,20 @@ export default function AboutPage() {
               找不到就索性再買一次。
             </p>
 
-            <div className="about-photo-mobile">
-              <img
-                src="/images/about/eagle.webp"
-                alt="Eagle"
-              />
+            <div className="about-photo-group">
+              <div className="about-photo-mobile">
+                <img
+                  src="/images/about/eagle.webp"
+                  alt="Eagle"
+                />
+              </div>
+
+              <div className="about-signature">
+                Illustration<br />
+                Apps<br />
+                A Kinder Life<br />
+                — Eagle ♡
+              </div>
             </div>
 
             <p>氣到我拿起 MacBook 開始做 App。</p>
@@ -111,9 +120,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="about-wish-art" aria-label="Eagle 與綿花糖插畫預留位置">
-          <span>ILLUSTRATION</span>
-        </div>
+        <div className="about-wish-art" aria-hidden="true" />
       </section>
 
       <footer className="home-footer about-footer">
