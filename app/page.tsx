@@ -3,7 +3,7 @@ export default function Home() {
     <main className="site-shell">
       <header className="site-header">
         <nav className="main-nav" aria-label="主要導覽">
-          <a href="/apps">Apps</a>
+          <a href="/about">Apps</a>
           <a href="/about">關於我</a>
           <a href="/story">部落格</a>
           <a href="/support">支援</a>
@@ -29,10 +29,10 @@ export default function Home() {
             <br />
             一個喜歡把日常變成可愛工具的
             <br />
-            創作者。
+            女生。
           </p>
 
-          <a className="primary-button" href="/apps">
+          <a className="primary-button" href="/about">
             認識我 →
           </a>
         </div>
