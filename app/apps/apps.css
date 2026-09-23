@@ -234,3 +234,65 @@
     justify-self: end;
   }
 }
+
+/* Apps card artwork — landscape illustration */
+.apps-card-top {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+}
+
+.apps-card-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin: 0;
+  object-fit: cover;
+  border: 0;
+  border-radius: 20px;
+  background: transparent;
+}
+
+.apps-card-title {
+  text-align: left;
+}
+
+.apps-card-title h2 {
+  margin: 0;
+}
+
+.apps-card-title strong {
+  margin-top: 4px;
+}
+
+.apps-card > p {
+  margin-top: 16px;
+}
+
+@media (max-width: 760px) {
+  .apps-card-top {
+    display: flex;
+    gap: 10px;
+  }
+
+  .apps-card-art {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 0;
+    border-radius: 14px;
+  }
+
+  .apps-card-title {
+    text-align: left;
+  }
+
+  .apps-card {
+    padding: 10px 10px 14px;
+  }
+
+  .apps-card > p {
+    margin-top: 11px;
+  }
+}
