@@ -18,7 +18,7 @@ const apps = [
   {
     name: "Baby",
     zh: "爸媽神器",
-    description: "成長記錄、疫苗提醒，新手父母教學，陪寶寶每個重要時刻。",
+    description: "成長記錄、疫苗提醒，新手父母教學\n陪寶寶每個重要時刻。",
     href: "/baby",
     className: "baby",
     image: "/images/apps/cards/baby.webp",
@@ -26,7 +26,7 @@ const apps = [
   {
     name: "Arrow Bar",
     zh: "",
-    description: "老公開發的小遊戲：\n簡單上手、短關好玩",
+    description: "老公開發的小遊戲： 簡單上手、短關好玩",
     href: "/arrowbar",
     className: "arrow-bar",
     image: "/images/apps/cards/arrow-bar.webp",
@@ -34,7 +34,7 @@ const apps = [
   {
     name: "Word Search",
     zh: "",
-    description: "老公開發的小遊戲：\n世上最難的尋字遊戲！",
+    description: "老公開發的小遊戲： 世上最難的尋字遊戲！",
     href: "/word_search",
     className: "word-search",
     image: "/images/apps/cards/word-search.webp",
@@ -82,16 +82,16 @@ export default function AppsPage() {
             key={app.name}
           >
             <div className="apps-card-top">
+              <div className="apps-card-title">
+                <h2>{app.name}</h2>
+                {app.zh && <strong>{app.zh}</strong>}
+              </div>
+
               <img
                 className="apps-card-art"
                 src={app.image}
                 alt=""
               />
-
-              <div className="apps-card-title">
-                <h2>{app.name}</h2>
-                {app.zh && <strong>{app.zh}</strong>}
-              </div>
             </div>
 
             <p>{app.description}</p>
