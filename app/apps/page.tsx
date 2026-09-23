@@ -18,7 +18,8 @@ const apps = [
   {
     name: "Baby",
     zh: "爸媽神器",
-    description: "成長記錄、疫苗提醒，新手父母教學\n陪寶寶每個重要時刻。",
+    description:
+      "成長記錄、疫苗提醒，新手父母教學\n陪寶寶每個重要時刻。",
     href: "/baby",
     className: "baby",
     image: "/images/apps/cards/baby.webp",
@@ -67,12 +68,6 @@ export default function AppsPage() {
         <h1>
           我的 Apps <span>♡</span>
         </h1>
-
-        <p>
-          不同的生活場景，同一份用心
-          <br />
-          都是從「要是有個 App 就好了」開始。
-        </p>
       </section>
 
       <section className="apps-grid">
@@ -103,7 +98,7 @@ export default function AppsPage() {
         ))}
       </section>
 
-      <footer className="home-footer apps-footer">
+      <footer className="home-footer">
         <span>Apps by Eagle</span>
         <span>Made with love, for a softer life.</span>
       </footer>

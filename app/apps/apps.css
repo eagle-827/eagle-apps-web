@@ -524,3 +524,14 @@
 .apps-card-title strong { -webkit-text-stroke: 7px rgba(255,255,255,1); paint-order: stroke fill; }
 
 .apps-card > p { text-align: center; }
+
+@media (max-width: 760px) {
+  .apps-card-title h2 { font-size: 21px; }
+  .apps-card-home .apps-card-title h2,
+  .apps-card-get-ready .apps-card-title h2,
+  .apps-card-baby .apps-card-title h2 { font-size: 25px; }
+  .apps-card-home .apps-card-title strong,
+  .apps-card-get-ready .apps-card-title strong,
+  .apps-card-baby .apps-card-title strong { font-size: 14px; }
+  .apps-intro { text-align: center; }
+}
