@@ -40,7 +40,7 @@ export default function Home() {
         <div className="hero-art" aria-label="Eagle 與綿花糖">
           <img
             className="hero-illustration"
-            src="/images/eagle-hero-new.webp"
+            src="/images/eagle-hero-bar03.webp"
             alt="Eagle 與綿花糖在創作桌前"
           />
         </div>
