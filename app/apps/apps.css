@@ -546,3 +546,20 @@
   .apps-card-get-ready .apps-card-title strong,
   .apps-card-baby .apps-card-title strong { font-size: 13px !important; }
 }
+
+.apps-description-mobile,
+.apps-button-mobile { display: none; }
+
+@media (max-width: 760px) {
+  .apps-description-desktop,
+  .apps-button-desktop { display: none; }
+  .apps-description-mobile,
+  .apps-button-mobile { display: block; }
+  .apps-card-title h2 { font-size: 17px !important; -webkit-text-stroke: 5px rgba(255,255,255,1) !important; }
+  .apps-card-home .apps-card-title h2,
+  .apps-card-get-ready .apps-card-title h2,
+  .apps-card-baby .apps-card-title h2 { font-size: 21px !important; }
+  .apps-card-home .apps-card-title strong,
+  .apps-card-get-ready .apps-card-title strong,
+  .apps-card-baby .apps-card-title strong { font-size: 12px !important; -webkit-text-stroke: 4px rgba(255,255,255,1) !important; }
+}
