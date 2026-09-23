@@ -111,6 +111,16 @@ export default function AboutPage() {
       </section>
 
       <section className="about-wish">
+        <img
+          className="about-wish-image"
+          src="/images/about/about-bottom.webp"
+          alt=""
+        />
+        <img
+          className="about-wish-image"
+          src="/images/about/about-bottom.webp"
+          alt=""
+        />
         <div className="about-wish-copy">
           <span className="quote-mark">“</span>
           <p>

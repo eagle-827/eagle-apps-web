@@ -1051,3 +1051,99 @@ a {
     font-size: 24px;
   }
 }
+
+.about-wish {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-wish-image {
+  position: absolute;
+  right: 18px;
+  bottom: 0;
+  width: 42%;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+@media (max-width: 760px) {
+  .about-wish-image {
+    right: 8px;
+    bottom: 0;
+    width: 45%;
+  }
+}
+
+.about-wish {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-wish-image {
+  position: absolute;
+  right: 18px;
+  bottom: 0;
+  width: 42%;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+@media (max-width: 760px) {
+  .about-wish-image {
+    right: 8px;
+    bottom: 0;
+    width: 45%;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-wish {
+    min-height: 285px;
+    overflow: visible;
+  }
+
+  .about-wish-image {
+    right: -2px;
+    bottom: -2px;
+    width: 52%;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-wish {
+    min-height: 245px;
+  }
+
+  .about-wish-image {
+    right: -4px;
+    bottom: -2px;
+    width: 61%;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-wish {
+    min-height: 210px;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-wish {
+    min-height: 180px;
+  }
+}
+
+
+
+@media (max-width: 760px) {
+
+  .about-wish {
+
+    min-height: 180px;
+
+  }
+
+}
+
