@@ -1,0 +1,24 @@
+.home-app-page {
+  min-height: 100vh;
+  margin: 0;
+  background: #fff9f5;
+}
+
+.home-app-showcase {
+  width: min(851px, 100%);
+  margin: 0 auto;
+  line-height: 0;
+}
+
+.home-app-showcase img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .home-app-showcase {
+    width: 100%;
+  }
+}
