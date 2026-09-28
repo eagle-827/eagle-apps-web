@@ -407,12 +407,23 @@ export default function HomeFaqPage() {
           />
 
           <div className="faq-contact-copy">
-            <strong>還是找不到答案？</strong>
-            <p>Eagle 會盡快回覆你 ♡</p>
+            <div className="faq-contact-desktop">
+              <strong>還是找不到答案？</strong>
+              <p>Eagle 會盡快回覆你 ♡</p>
+            </div>
+
+            <div className="faq-contact-mobile">
+              <strong>找不到想問的問題</strong>
+              <p>歡迎聯絡Eagle♡</p>
+            </div>
           </div>
 
-          <a href="mailto:valor.crown.tw@gmail.com">
-            聯絡我們 →
+          <a
+            className="faq-contact-button"
+            href="mailto:valor.crown.tw@gmail.com"
+          >
+            <span className="faq-contact-button-desktop">聯絡我們 →</span>
+            <span className="faq-contact-button-mobile">聯絡Eagle</span>
           </a>
 
           <img
