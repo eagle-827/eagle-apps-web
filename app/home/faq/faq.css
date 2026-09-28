@@ -816,3 +816,10 @@
     padding-right: 76px;
   }
 }
+
+@media (max-width: 760px) {
+  .faq-hero h1 {
+    font-family: "ChenYuLuoYan", "PingFang TC", sans-serif;
+    font-weight: 400;
+  }
+}
