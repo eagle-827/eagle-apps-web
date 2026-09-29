@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Caveat } from "next/font/google";
 import "./globals.css";
 
+import SiteFooter from "./components/SiteFooter";
 const caveat = Caveat({
   subsets: ["latin"],
   variable: "--font-caveat",
@@ -20,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-Hant">
-      <body className={caveat.variable}>{children}</body>
+      <body className={caveat.variable}>
+        {children}
+        <SiteFooter />
+      </body>
     </html>
   );
 }

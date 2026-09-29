@@ -15,6 +15,7 @@ const navItems = [
 export default function SiteHeader() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [appsOpen, setAppsOpen] = useState(false);
 
   const isActive = (href: string) => {
     if (href === "/apps") return pathname === "/apps" || pathname === "/apps/";
@@ -33,7 +34,6 @@ export default function SiteHeader() {
           onClick={() => setMenuOpen(false)}
         >
           <span className="eagle-brand-desktop">首頁♡</span>
-          <span className="eagle-brand-mobile">♡</span>
         </a>
 
         <nav className="eagle-desktop-nav" aria-label="主要導覽">
@@ -76,22 +76,55 @@ export default function SiteHeader() {
 
       <div className={`eagle-mobile-menu${menuOpen ? " open" : ""}`}>
         <nav aria-label="手機導覽">
-          {navItems.map((item) =>
-            item.href ? (
-              <a
-                key={item.label}
-                href={item.href}
-                className={isActive(item.href) ? "active" : undefined}
-                onClick={() => setMenuOpen(false)}
-              >
-                {item.label}
-              </a>
-            ) : (
-              <span key={item.label} className="eagle-nav-placeholder">
-                {item.label}
-              </span>
-            )
-          )}
+          <a
+            href="/apps"
+            className={isActive("/apps") ? "active" : undefined}
+            onClick={() => setMenuOpen(false)}
+          >
+            首頁♡
+          </a>
+
+          <a
+            href="/apps/about"
+            className={isActive("/apps/about") ? "active" : undefined}
+            onClick={() => setMenuOpen(false)}
+          >
+            關於我
+          </a>
+
+          <button
+            type="button"
+            className={`eagle-mobile-apps-toggle${appsOpen ? " open" : ""}`}
+            aria-expanded={appsOpen}
+            onClick={() => setAppsOpen((open) => !open)}
+          >
+            <span>Apps</span>
+            <span className="eagle-submenu-chevron">⌄</span>
+          </button>
+
+          <div className={`eagle-apps-submenu${appsOpen ? " open" : ""}`}>
+            <a
+              href="/apps/home"
+              onClick={() => {
+                setAppsOpen(false);
+                setMenuOpen(false);
+              }}
+            >
+              家庭神器
+            </a>
+          </div>
+
+          <span className="eagle-nav-placeholder">
+            LINE貼圖
+          </span>
+
+          <a
+            href="/apps/contact"
+            className={isActive("/apps/contact") ? "active" : undefined}
+            onClick={() => setMenuOpen(false)}
+          >
+            聯絡我
+          </a>
         </nav>
       </div>
     </header>
