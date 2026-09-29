@@ -32,7 +32,8 @@ export default function SiteHeader() {
           href="/apps"
           onClick={() => setMenuOpen(false)}
         >
-          首頁♡
+          <span className="eagle-brand-desktop">首頁♡</span>
+          <span className="eagle-brand-mobile">♡</span>
         </a>
 
         <nav className="eagle-desktop-nav" aria-label="主要導覽">
@@ -65,6 +66,13 @@ export default function SiteHeader() {
           <span />
         </button>
       </div>
+
+      <button
+        type="button"
+        className={`eagle-menu-backdrop${menuOpen ? " open" : ""}`}
+        aria-label="關閉選單"
+        onClick={() => setMenuOpen(false)}
+      />
 
       <div className={`eagle-mobile-menu${menuOpen ? " open" : ""}`}>
         <nav aria-label="手機導覽">
