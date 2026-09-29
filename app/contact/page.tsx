@@ -160,7 +160,7 @@ export default function ContactPage() {
               rel="noreferrer"
             >
               <img className="social-icon" src="/apps/images/contact/contact1.webp" alt="" />
-              <strong>Facebook</strong>
+              
               
               
             </a>
@@ -172,7 +172,7 @@ export default function ContactPage() {
               rel="noreferrer"
             >
               <img className="social-icon" src="/apps/images/contact/contact2.webp" alt="" />
-              <strong>Instagram</strong>
+              
               
               
             </a>
@@ -184,7 +184,7 @@ export default function ContactPage() {
               rel="noreferrer"
             >
               <img className="social-icon" src="/apps/images/contact/contact3.webp" alt="" />
-              <strong>Threads</strong>
+              
               
               
             </a>
@@ -194,7 +194,7 @@ export default function ContactPage() {
               href="mailto:valor.crown.tw@gmail.com"
             >
               <img className="social-icon" src="/apps/images/contact/contact4.webp" alt="" />
-              <strong>Email</strong>
+              
               
               
             </a>
