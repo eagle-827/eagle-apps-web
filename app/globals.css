@@ -1190,3 +1190,9 @@ a {
 }
 
 @import "./apps/apps.css";
+
+/* Homepage hero title — same handwriting as About subtitle */
+.hero-copy h1 {
+  font-family: "ChenYuLuoYan", "PingFang TC", sans-serif;
+  font-weight: 400;
+}

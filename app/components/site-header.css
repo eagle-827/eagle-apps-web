@@ -266,3 +266,16 @@
     font-size: 14px;
   }
 }
+
+/* More breathing room for mobile Apps submenu */
+@media (max-width: 760px) {
+  .eagle-apps-submenu {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+
+  .eagle-apps-submenu a {
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+}
