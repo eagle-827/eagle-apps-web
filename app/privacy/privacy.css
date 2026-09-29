@@ -1,4 +1,4 @@
-.privacy1-page {
+.privacy-page {
   min-height: 100vh;
   background:
     radial-gradient(circle at 8% 18%, rgba(247, 218, 217, 0.34), transparent 24%),
@@ -7,7 +7,7 @@
   color: #4f403b;
 }
 
-.privacy1-header {
+.privacy-header {
   height: 82px;
   padding: 0 6%;
   display: grid;
@@ -17,52 +17,52 @@
   background: rgba(255, 250, 246, 0.9);
 }
 
-.privacy1-brand {
+.privacy-brand {
   justify-self: start;
   color: #4f403b;
   font-size: 21px;
   font-weight: 700;
 }
 
-.privacy1-header nav {
+.privacy-header nav {
   display: flex;
   align-items: center;
   gap: 38px;
   font-size: 14px;
 }
 
-.privacy1-header nav a {
+.privacy-header nav a {
   padding: 30px 2px 8px;
   color: #665650;
 }
 
-.privacy1-header nav a.active {
+.privacy-header nav a.active {
   border-bottom: 2px solid #c78382;
 }
 
-.privacy1-header .follow-button {
+.privacy-header .follow-button {
   justify-self: end;
 }
 
-.privacy1-hero {
+.privacy-hero {
   width: min(1040px, calc(100% - 48px));
   margin: 0 auto;
   padding: 38px 0 42px;
   position: relative;
 }
 
-.privacy1-breadcrumb {
+.privacy-breadcrumb {
   margin-bottom: 54px;
   color: #b29c91;
   font-size: 12px;
   letter-spacing: 0.03em;
 }
 
-.privacy1-hero-copy {
+.privacy-hero-copy {
   max-width: 600px;
 }
 
-.privacy1-hero-copy > p {
+.privacy-hero-copy > p {
   margin: 0 0 7px;
   color: #c78382;
   font-size: 14px;
@@ -70,7 +70,7 @@
   letter-spacing: 0.04em;
 }
 
-.privacy1-hero h1 {
+.privacy-hero h1 {
   margin: 0;
   font-family: "Kaiti TC", "STKaiti", "DFKai-SB", serif;
   font-size: clamp(46px, 5.4vw, 72px);
@@ -79,26 +79,26 @@
   letter-spacing: 0.04em;
 }
 
-.privacy1-hero h1 span {
+.privacy-hero h1 span {
   color: #d89896;
   font-family: Georgia, serif;
   font-weight: 400;
 }
 
-.privacy1-intro {
+.privacy-intro {
   margin-top: 24px;
   color: #88736b;
   font-size: 15px;
   line-height: 2;
 }
 
-.privacy1-content {
+.privacy-content {
   width: min(1040px, calc(100% - 48px));
   margin: 0 auto;
   padding-bottom: 90px;
 }
 
-.privacy1-search {
+.privacy-search {
   width: 100%;
   height: 58px;
   padding: 0 22px;
@@ -111,14 +111,14 @@
   box-shadow: 0 10px 30px rgba(113, 78, 66, 0.055);
 }
 
-.privacy1-search > span {
+.privacy-search > span {
   color: #c38a87;
   font-size: 27px;
   line-height: 1;
   transform: rotate(-15deg);
 }
 
-.privacy1-search input {
+.privacy-search input {
   width: 100%;
   border: 0;
   outline: 0;
@@ -128,18 +128,18 @@
   font-size: 14px;
 }
 
-.privacy1-search input::placeholder {
+.privacy-search input::placeholder {
   color: #b7a59c;
 }
 
-.privacy1-categories {
+.privacy-categories {
   margin: 22px 0 30px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.privacy1-categories button {
+.privacy-categories button {
   padding: 9px 16px;
   border: 1px solid #eadbd3;
   border-radius: 999px;
@@ -151,24 +151,24 @@
   transition: 0.18s ease;
 }
 
-.privacy1-categories button:hover {
+.privacy-categories button:hover {
   border-color: #dca9a7;
   color: #bd7d7b;
 }
 
-.privacy1-categories button.active {
+.privacy-categories button.active {
   border-color: #d49391;
   background: #d49391;
   color: #fff;
   box-shadow: 0 5px 14px rgba(190, 126, 123, 0.16);
 }
 
-.privacy1-list {
+.privacy-list {
   display: grid;
   gap: 13px;
 }
 
-.privacy1-item {
+.privacy-item {
   overflow: hidden;
   border: 1px solid #eaded8;
   border-radius: 22px;
@@ -180,16 +180,16 @@
     transform 0.2s ease;
 }
 
-.privacy1-item:hover {
+.privacy-item:hover {
   border-color: #dfc6bc;
 }
 
-.privacy1-item.open {
+.privacy-item.open {
   border-color: #e3c1bc;
   box-shadow: 0 12px 34px rgba(111, 72, 62, 0.075);
 }
 
-.privacy1-question {
+.privacy-question {
   width: 100%;
   min-height: 82px;
   padding: 16px 23px;
@@ -204,20 +204,20 @@
   cursor: pointer;
 }
 
-.privacy1-number {
+.privacy-number {
   color: #d59b98;
   font-family: Georgia, serif;
   font-size: 17px;
   font-style: italic;
 }
 
-.privacy1-question strong {
+.privacy-question strong {
   font-size: 15px;
   font-weight: 650;
   letter-spacing: 0.02em;
 }
 
-.privacy1-chevron {
+.privacy-chevron {
   width: 31px;
   height: 31px;
   display: grid;
@@ -229,7 +229,7 @@
   font-size: 16px;
 }
 
-.privacy1-answer {
+.privacy-answer {
   margin: 0 74px 0 86px;
   padding: 0 0 26px;
   color: #78645d;
@@ -237,7 +237,7 @@
   line-height: 1.9;
 }
 
-.privacy1-answer::before {
+.privacy-answer::before {
   content: "";
   display: block;
   height: 1px;
@@ -245,15 +245,15 @@
   background: #f0e4df;
 }
 
-.privacy1-answer p {
+.privacy-answer p {
   margin: 0 0 12px;
 }
 
-.privacy1-answer p:last-child {
+.privacy-answer p:last-child {
   margin-bottom: 0;
 }
 
-.privacy1-contact {
+.privacy-contact {
   margin-top: 38px;
   padding: 34px 38px;
   display: flex;
@@ -267,7 +267,7 @@
     #f7dedb;
 }
 
-.privacy1-contact strong {
+.privacy-contact strong {
   display: block;
   margin-bottom: 7px;
   color: #654d47;
@@ -276,13 +276,13 @@
   font-weight: 600;
 }
 
-.privacy1-contact p {
+.privacy-contact p {
   margin: 0;
   color: #9c7770;
   font-size: 13px;
 }
 
-.privacy1-contact a {
+.privacy-contact a {
   flex: 0 0 auto;
   padding: 11px 19px;
   border-radius: 999px;
@@ -293,116 +293,116 @@
 }
 
 @media (max-width: 760px) {
-  .privacy1-header {
+  .privacy-header {
     height: 66px;
     padding: 0 20px;
     grid-template-columns: 1fr auto;
   }
 
-  .privacy1-header nav {
+  .privacy-header nav {
     display: none;
   }
 
-  .privacy1-brand {
+  .privacy-brand {
     font-size: 18px;
   }
 
-  .privacy1-header .follow-button {
+  .privacy-header .follow-button {
     padding: 9px 14px;
     font-size: 11px;
   }
 
-  .privacy1-hero {
+  .privacy-hero {
     width: calc(100% - 40px);
     padding: 25px 0 31px;
   }
 
-  .privacy1-breadcrumb {
+  .privacy-breadcrumb {
     margin-bottom: 38px;
     font-size: 10px;
   }
 
-  .privacy1-hero-copy > p {
+  .privacy-hero-copy > p {
     font-size: 12px;
   }
 
-  .privacy1-hero h1 {
+  .privacy-hero h1 {
     font-size: 44px;
   }
 
-  .privacy1-intro {
+  .privacy-intro {
     margin-top: 18px;
     font-size: 13px;
     line-height: 1.85;
   }
 
-  .privacy1-content {
+  .privacy-content {
     width: calc(100% - 32px);
     padding-bottom: 60px;
   }
 
-  .privacy1-search {
+  .privacy-search {
     height: 52px;
     padding: 0 16px;
     border-radius: 16px;
   }
 
-  .privacy1-search input {
+  .privacy-search input {
     font-size: 12px;
   }
 
-  .privacy1-categories {
+  .privacy-categories {
     margin: 16px 0 23px;
     gap: 7px;
   }
 
-  .privacy1-categories button {
+  .privacy-categories button {
     padding: 7px 11px;
     font-size: 10px;
   }
 
-  .privacy1-list {
+  .privacy-list {
     gap: 10px;
   }
 
-  .privacy1-item {
+  .privacy-item {
     border-radius: 18px;
   }
 
-  .privacy1-question {
+  .privacy-question {
     min-height: 72px;
     padding: 13px 15px;
     grid-template-columns: 31px 1fr 30px;
     gap: 9px;
   }
 
-  .privacy1-number {
+  .privacy-number {
     font-size: 13px;
   }
 
-  .privacy1-question strong {
+  .privacy-question strong {
     font-size: 13px;
     line-height: 1.55;
   }
 
-  .privacy1-chevron {
+  .privacy-chevron {
     width: 28px;
     height: 28px;
     font-size: 14px;
   }
 
-  .privacy1-answer {
+  .privacy-answer {
     margin: 0 46px 0 55px;
     padding-bottom: 21px;
     font-size: 12px;
     line-height: 1.85;
   }
 
-  .privacy1-answer::before {
+  .privacy-answer::before {
     margin-bottom: 15px;
   }
 
-  .privacy1-contact {
+  .privacy-contact {
     margin-top: 26px;
     padding: 25px 21px;
     border-radius: 21px;
@@ -411,57 +411,57 @@
     gap: 18px;
   }
 
-  .privacy1-contact strong {
+  .privacy-contact strong {
     font-size: 21px;
   }
 
-  .privacy1-contact a {
+  .privacy-contact a {
     align-self: flex-end;
   }
 }
 
 /* ===== FAQ illustration layout ===== */
 
-.privacy1-hero-layout {
+.privacy-hero-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr);
   align-items: center;
   gap: 40px;
 }
 
-.privacy1-hero-art {
+.privacy-hero-art {
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: 0;
 }
 
-.privacy1-hero-art img {
+.privacy-hero-art img {
   display: block;
   width: min(100%, 520px);
   height: auto;
   object-fit: contain;
 }
 
-.privacy1-categories button {
+.privacy-categories button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 7px;
 }
 
-.privacy1-categories button img {
+.privacy-categories button img {
   width: 27px;
   height: 27px;
   object-fit: contain;
   flex: 0 0 auto;
 }
 
-.privacy1-question {
+.privacy-question {
   grid-template-columns: 48px 82px minmax(0, 1fr) 36px;
 }
 
-.privacy1-question-art {
+.privacy-question-art {
   width: 72px;
   height: 58px;
   display: flex;
@@ -469,7 +469,7 @@
   justify-content: center;
 }
 
-.privacy1-question-art img {
+.privacy-question-art img {
   display: block;
   max-width: 72px;
   max-height: 58px;
@@ -478,17 +478,17 @@
   object-fit: contain;
 }
 
-.privacy1-answer {
+.privacy-answer {
   margin-left: 145px;
 }
 
-.privacy1-answer a {
+.privacy-answer a {
   color: #bd7d7b;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-.privacy1-contact {
+.privacy-contact {
   position: relative;
   min-height: 160px;
   padding-left: 185px;
@@ -496,12 +496,12 @@
   overflow: hidden;
 }
 
-.privacy1-contact-copy {
+.privacy-contact-copy {
   position: relative;
   z-index: 2;
 }
 
-.privacy1-contact-dog {
+.privacy-contact-dog {
   position: absolute;
   left: 18px;
   bottom: -8px;
@@ -511,7 +511,7 @@
   z-index: 1;
 }
 
-.privacy1-contact-plant {
+.privacy-contact-plant {
   position: absolute;
   right: 14px;
   bottom: -7px;
@@ -521,32 +521,32 @@
   z-index: 1;
 }
 
-.privacy1-contact > a {
+.privacy-contact > a {
   position: relative;
   z-index: 2;
 }
 
 @media (max-width: 760px) {
-  .privacy1-hero-layout {
+  .privacy-hero-layout {
     grid-template-columns: 1fr;
     gap: 12px;
   }
 
-  .privacy1-hero-art {
+  .privacy-hero-art {
     margin-top: -8px;
   }
 
-  .privacy1-hero-art img {
+  .privacy-hero-art img {
     width: min(100%, 390px);
   }
 
-  .privacy1-categories {
+  .privacy-categories {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 7px;
   }
 
-  .privacy1-categories button {
+  .privacy-categories button {
     min-width: 0;
     padding: 8px 5px;
     flex-direction: column;
@@ -554,121 +554,121 @@
     border-radius: 15px;
   }
 
-  .privacy1-categories button img {
+  .privacy-categories button img {
     width: 30px;
     height: 30px;
   }
 
-  .privacy1-categories button span {
+  .privacy-categories button span {
     font-size: 9px;
     white-space: nowrap;
   }
 
-  .privacy1-question {
+  .privacy-question {
     grid-template-columns: 27px 56px minmax(0, 1fr) 28px;
     gap: 7px;
     padding: 11px 12px;
   }
 
-  .privacy1-question-art {
+  .privacy-question-art {
     width: 52px;
     height: 48px;
   }
 
-  .privacy1-question-art img {
+  .privacy-question-art img {
     max-width: 52px;
     max-height: 48px;
   }
 
-  .privacy1-answer {
+  .privacy-answer {
     margin: 0 42px 0 102px;
     padding-bottom: 20px;
   }
 
-  .privacy1-contact {
+  .privacy-contact {
     min-height: 190px;
     padding: 28px 82px 28px 105px;
     justify-content: center;
   }
 
-  .privacy1-contact-dog {
+  .privacy-contact-dog {
     left: 5px;
     bottom: -3px;
     width: 100px;
   }
 
-  .privacy1-contact-plant {
+  .privacy-contact-plant {
     right: -8px;
     bottom: -4px;
     width: 85px;
   }
 
-  .privacy1-contact > a {
+  .privacy-contact > a {
     align-self: flex-start;
   }
 }
 
 @media (max-width: 430px) {
-  .privacy1-categories {
+  .privacy-categories {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .privacy1-question {
+  .privacy-question {
     grid-template-columns: 24px 48px minmax(0, 1fr) 27px;
     gap: 6px;
   }
 
-  .privacy1-question-art {
+  .privacy-question-art {
     width: 45px;
     height: 43px;
   }
 
-  .privacy1-question-art img {
+  .privacy-question-art img {
     max-width: 45px;
     max-height: 43px;
   }
 
-  .privacy1-answer {
+  .privacy-answer {
     margin-left: 84px;
     margin-right: 34px;
   }
 
-  .privacy1-contact {
+  .privacy-contact {
     padding-left: 92px;
     padding-right: 65px;
   }
 
-  .privacy1-contact-dog {
+  .privacy-contact-dog {
     width: 88px;
   }
 
-  .privacy1-contact-plant {
+  .privacy-contact-plant {
     width: 72px;
   }
 }
 
 /* ===== FAQ mobile reference refinements ===== */
 
-.privacy1-contact-mobile,
-.privacy1-contact-button-mobile {
+.privacy-contact-mobile,
+.privacy-contact-button-mobile {
   display: none;
 }
 
 @media (max-width: 760px) {
-  .privacy1-hero h1 {
+  .privacy-hero h1 {
     font-family: "Kaiti TC", "STKaiti", "DFKai-SB", cursive;
     font-weight: 500;
     letter-spacing: 0.06em;
   }
 
-  .privacy1-categories {
+  .privacy-categories {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
     gap: 5px;
     width: 100%;
   }
 
-  .privacy1-categories button {
+  .privacy-categories button {
     min-width: 0;
     height: 68px;
     padding: 6px 2px;
@@ -676,22 +676,22 @@
     gap: 2px;
   }
 
-  .privacy1-categories button img {
+  .privacy-categories button img {
     width: 22px;
     height: 22px;
   }
 
-  .privacy1-categories button span {
+  .privacy-categories button span {
     font-size: 8px;
     line-height: 1.15;
     white-space: nowrap;
   }
 
-  .privacy1-question {
+  .privacy-question {
     grid-template-columns: 46px 58px minmax(0, 1fr) 30px;
   }
 
-  .privacy1-number {
+  .privacy-number {
     width: 42px;
     height: 42px;
     display: grid;
@@ -702,37 +702,37 @@
     font-size: 13px;
   }
 
-  .privacy1-item:nth-child(4n + 1) .privacy1-number {
+  .privacy-item:nth-child(4n + 1) .privacy-number {
     background: #f8dedd;
     color: #c98282;
   }
 
-  .privacy1-item:nth-child(4n + 2) .privacy1-number {
+  .privacy-item:nth-child(4n + 2) .privacy-number {
     background: #faebc9;
     color: #c5954f;
   }
 
-  .privacy1-item:nth-child(4n + 3) .privacy1-number {
+  .privacy-item:nth-child(4n + 3) .privacy-number {
     background: #dceee5;
     color: #66927e;
   }
 
-  .privacy1-item:nth-child(4n + 4) .privacy1-number {
+  .privacy-item:nth-child(4n + 4) .privacy-number {
     background: #dceaf4;
     color: #6588a5;
   }
 
-  .privacy1-contact-desktop,
-  .privacy1-contact-button-desktop {
+  .privacy-contact-desktop,
+  .privacy-contact-button-desktop {
     display: none;
   }
 
-  .privacy1-contact-mobile,
-  .privacy1-contact-button-mobile {
+  .privacy-contact-mobile,
+  .privacy-contact-button-mobile {
     display: block;
   }
 
-  .privacy1-contact {
+  .privacy-contact {
     min-height: 125px;
     padding: 20px 115px 20px 105px;
     flex-direction: row;
@@ -741,24 +741,24 @@
     gap: 10px;
   }
 
-  .privacy1-contact-copy {
+  .privacy-contact-copy {
     flex: 1 1 auto;
     min-width: 0;
   }
 
-  .privacy1-contact-mobile strong {
+  .privacy-contact-mobile strong {
     margin-bottom: 5px;
     font-size: 14px;
     line-height: 1.35;
     white-space: nowrap;
   }
 
-  .privacy1-contact-mobile p {
+  .privacy-contact-mobile p {
     font-size: 10px;
     white-space: nowrap;
   }
 
-  .privacy1-contact .privacy1-contact-button {
+  .privacy-contact .privacy-contact-button {
     flex: 0 0 auto;
     align-self: center;
     padding: 9px 13px;
@@ -766,13 +766,13 @@
     white-space: nowrap;
   }
 
-  .privacy1-contact-dog {
+  .privacy-contact-dog {
     left: 8px;
     bottom: -4px;
     width: 92px;
   }
 
-  .privacy1-contact-plant {
+  .privacy-contact-plant {
     right: 5px;
     bottom: -4px;
     width: 72px;
@@ -780,45 +780,45 @@
 }
 
 @media (max-width: 430px) {
-  .privacy1-categories {
+  .privacy-categories {
     grid-template-columns: repeat(7, minmax(0, 1fr));
     gap: 3px;
   }
 
-  .privacy1-categories button {
+  .privacy-categories button {
     height: 62px;
     padding: 5px 1px;
     border-radius: 11px;
   }
 
-  .privacy1-categories button img {
+  .privacy-categories button img {
     width: 20px;
     height: 20px;
   }
 
-  .privacy1-categories button span {
+  .privacy-categories button span {
     font-size: 7px;
   }
 
-  .privacy1-question {
+  .privacy-question {
     grid-template-columns: 42px 50px minmax(0, 1fr) 27px;
     gap: 5px;
   }
 
-  .privacy1-number {
+  .privacy-number {
     width: 38px;
     height: 38px;
     font-size: 12px;
   }
 
-  .privacy1-contact {
+  .privacy-contact {
     padding-left: 92px;
     padding-right: 76px;
   }
 }
 
 @media (max-width: 760px) {
-  .privacy1-hero h1 {
+  .privacy-hero h1 {
     font-family: "ChenYuLuoYan", "PingFang TC", sans-serif;
     font-weight: 400;
   }

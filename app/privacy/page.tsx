@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import "./privacy1.css";
+import "./privacy.css";
 
 type FaqItem = {
   id: number;
@@ -194,13 +194,13 @@ const faqs: FaqItem[] = [
   },
 ];
 
-export default function Privacy1Page() {
+export default function PrivacyPage() {
   const [openId, setOpenId] = useState<number | null>(null);
 
   return (
-    <main className="privacy1-page">
-      <header className="privacy1-header">
-        <a className="privacy1-brand" href="/">
+    <main className="privacy-page">
+      <header className="privacy-header">
+        <a className="privacy-brand" href="/">
           Eagle 🪽
         </a>
 
@@ -221,25 +221,25 @@ export default function Privacy1Page() {
         </a>
       </header>
 
-      <section className="privacy1-hero">
-        <div className="privacy1-breadcrumb">Apps by Eagle / Privacy</div>
+      <section className="privacy-hero">
+        <div className="privacy-breadcrumb">Apps by Eagle / Privacy</div>
 
-        <div className="privacy1-hero-layout">
-          <div className="privacy1-hero-copy">
+        <div className="privacy-hero-layout">
+          <div className="privacy-hero-copy">
             <p>Apps by Eagle</p>
 
             <h1>
               隱私權政策 <span>♡</span>
             </h1>
 
-            <div className="privacy1-intro">
+            <div className="privacy-intro">
               Valor Crown 重視你的隱私。
               <br />
               這裡說明我們如何處理及保護你的資料 ♡
             </div>
           </div>
 
-          <div className="privacy1-hero-art">
+          <div className="privacy-hero-art">
             <img
               src="/images/privacy/hero.webp"
               alt="Apps by Eagle 隱私權政策"
@@ -248,28 +248,28 @@ export default function Privacy1Page() {
         </div>
       </section>
 
-      <section className="privacy1-content">
+      <section className="privacy-content">
 
 
-        <div className="privacy1-list">
+        <div className="privacy-list">
           {faqs.map((faq) => {
             const isOpen = openId === faq.id;
             const number = String(faq.id).padStart(2, "0");
 
             return (
               <article
-                className={`privacy1-item ${isOpen ? "open" : ""}`}
+                className={`privacy-item ${isOpen ? "open" : ""}`}
                 key={faq.id}
               >
                 <button
                   type="button"
-                  className="privacy1-question"
+                  className="privacy-question"
                   onClick={() => setOpenId(isOpen ? null : faq.id)}
                   aria-expanded={isOpen}
                 >
-                  <span className="privacy1-number">{number}</span>
+                  <span className="privacy-number">{number}</span>
 
-                  <span className="privacy1-question-art">
+                  <span className="privacy-question-art">
                     <img
                       src={`/images/privacy/q-${number}.webp`}
                       alt=""
@@ -279,13 +279,13 @@ export default function Privacy1Page() {
 
                   <strong>{faq.question}</strong>
 
-                  <span className="privacy1-chevron">
+                  <span className="privacy-chevron">
                     {isOpen ? "⌃" : "⌄"}
                   </span>
                 </button>
 
                 {isOpen && (
-                  <div className="privacy1-answer">
+                  <div className="privacy-answer">
                     {faq.answer}
                   </div>
                 )}
