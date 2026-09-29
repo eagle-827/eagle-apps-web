@@ -130,7 +130,6 @@ export default function ContactPage() {
               歡迎聯絡我♡
             </p>
 
-            <span className="contact-handwriting">Let&apos;s talk! ♡</span>
           </div>
 
           <div className="contact-hero-art">
@@ -323,8 +322,6 @@ export default function ContactPage() {
               </div>
 
               <div className="wish-thanks">
-                <span>Thank you</span>
-                <span>for your support! ♡</span>
                 <img
                   src="/apps/images/contact/thanks.webp"
                   alt="綿花糖謝謝你的支持"

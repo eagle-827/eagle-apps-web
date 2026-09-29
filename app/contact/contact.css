@@ -361,7 +361,7 @@
   font-size: 17px;
 }
 
-.app-choice small {
+.app-choice:not(:last-child) small {
   margin-top: 3px;
   color: #6d7075;
   font-size: 13px;
@@ -701,4 +701,13 @@
     width: 80px;
     height: 80px;
   }
+}
+
+/* Handwritten font — same as /apps/about 「香港移民台灣的女生」 */
+.contact-hero h1,
+.contact-methods h2,
+.wish-intro h2,
+.app-choice:not(:last-child) small {
+  font-family: "ChenYuLuoYan", "PingFang TC", sans-serif;
+  font-weight: 400;
 }
