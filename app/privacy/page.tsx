@@ -1,4 +1,5 @@
 "use client";
+import SiteHeader from "../components/SiteHeader";
 
 import { useState } from "react";
 import "./privacy.css";
@@ -199,27 +200,7 @@ export default function PrivacyPage() {
 
   return (
     <main className="privacy-page">
-      <header className="privacy-header">
-        <a className="privacy-brand" href="/apps">
-          Eagle 🪽
-        </a>
-
-        <nav>
-          <a href="/apps/apps">Apps</a>
-          <a href="/apps/about">關於我</a>
-          <a href="/apps/blog">部落格</a>
-          <a className="active" href="/apps/support">
-            支援
-          </a>
-        </nav>
-
-        <a
-          className="follow-button"
-          href="mailto:valor.crown.tw@gmail.com"
-        >
-          聯絡我 ♡
-        </a>
-      </header>
+      <SiteHeader />
 
       <section className="privacy-hero">
         <div className="privacy-breadcrumb">Apps by Eagle / Privacy</div>

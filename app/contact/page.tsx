@@ -1,4 +1,5 @@
 "use client";
+import SiteHeader from "../components/SiteHeader";
 
 import { FormEvent, useState } from "react";
 import "./contact.css";
@@ -99,24 +100,7 @@ export default function ContactPage() {
   return (
     <main className="contact-page">
       <div className="contact-shell">
-        <header className="contact-header">
-          <a className="contact-logo" href="/apps">
-            Eagle ♡
-          </a>
-
-          <nav className="contact-nav" aria-label="主要導覽">
-            <a href="/apps/apps">Apps</a>
-            <a href="/apps/about">關於我</a>
-            <a href="/apps/story">部落格</a>
-            <a className="active" href="/apps/contact">
-              支援
-            </a>
-          </nav>
-
-          <a className="contact-follow" href="#contact-methods">
-            追蹤我 ♡
-          </a>
-        </header>
+        <SiteHeader />
 
         <section className="contact-hero">
           <div className="contact-hero-copy">

@@ -1,4 +1,5 @@
 "use client";
+import SiteHeader from "../../components/SiteHeader";
 
 import { useMemo, useState } from "react";
 import "./faq.css";
@@ -272,27 +273,7 @@ export default function HomeFaqPage() {
 
   return (
     <main className="faq-page">
-      <header className="faq-header">
-        <a className="faq-brand" href="/apps">
-          Eagle 🪽
-        </a>
-
-        <nav>
-          <a href="/apps/apps">Apps</a>
-          <a href="/apps/about">關於我</a>
-          <a href="/apps/blog">部落格</a>
-          <a className="active" href="/apps/support">
-            支援
-          </a>
-        </nav>
-
-        <a
-          className="follow-button"
-          href="mailto:valor.crown.tw@gmail.com"
-        >
-          聯絡我 ♡
-        </a>
-      </header>
+      <SiteHeader />
 
       <section className="faq-hero">
         <div className="faq-breadcrumb">Apps / Home / FAQ</div>

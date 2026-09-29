@@ -1,8 +1,10 @@
+import SiteHeader from "../components/SiteHeader";
 import "./home.css";
 
 export default function HomeAppPage() {
   return (
     <main className="home-app-page">
+      <SiteHeader />
       <div className="home-app-showcase">
         <img
           src="/apps/images/home/home-01.png"

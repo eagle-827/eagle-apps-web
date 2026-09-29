@@ -1,18 +1,8 @@
+import SiteHeader from "./components/SiteHeader";
 export default function Home() {
   return (
     <main className="site-shell">
-      <header className="site-header">
-        <nav className="main-nav" aria-label="主要導覽">
-          <a href="/apps/about">Apps</a>
-          <a href="/apps/about">關於我</a>
-          <a href="/apps/story">部落格</a>
-          <a href="/apps/support">支援</a>
-        </nav>
-
-        <a className="follow-button" href="#follow">
-          追蹤我 ♡
-        </a>
-      </header>
+      <SiteHeader />
 
       <section className="hero">
         <div className="hero-copy">

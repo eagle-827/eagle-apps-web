@@ -1,3 +1,4 @@
+import SiteHeader from "../components/SiteHeader";
 const apps = [
   {
     name: "Home",
@@ -56,24 +57,7 @@ const apps = [
 export default function AppsPage() {
   return (
     <main className="apps-page">
-      <header className="about-header apps-header">
-        <a className="about-brand" href="/apps">
-          Eagle 🪽
-        </a>
-
-        <nav>
-          <a className="active" href="/apps/apps">
-            Apps
-          </a>
-          <a href="/apps/about">關於我</a>
-          <a href="/apps/blog">部落格</a>
-          <a href="/apps/support">支援</a>
-        </nav>
-
-        <a className="follow-button" href="#">
-          追蹤我 ♡
-        </a>
-      </header>
+      <SiteHeader />
 
       <section className="apps-intro">
         <h1>
