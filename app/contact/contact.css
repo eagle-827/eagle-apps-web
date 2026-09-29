@@ -721,3 +721,18 @@
     font-weight: 400;
   }
 }
+
+/* Larger illustrated social icons */
+.social-icon {
+  width: 110px;
+  height: 110px;
+  margin-bottom: 8px;
+  object-fit: contain;
+}
+
+@media (max-width: 480px) {
+  .social-icon {
+    width: 90px;
+    height: 90px;
+  }
+}
