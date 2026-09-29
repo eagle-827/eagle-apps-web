@@ -21,13 +21,13 @@ type FaqItem = {
 };
 
 const categories: { name: Category; icon: string }[] = [
-  { name: "所有問題", icon: "/images/home/faq/icon-01.webp" },
-  { name: "開始使用", icon: "/images/home/faq/icon-02.webp" },
-  { name: "物品管理", icon: "/images/home/faq/icon-03.webp" },
-  { name: "購物清單", icon: "/images/home/faq/icon-04.webp" },
-  { name: "家庭共享", icon: "/images/home/faq/icon-05.webp" },
-  { name: "帳號與同步", icon: "/images/home/faq/icon-06.webp" },
-  { name: "其他", icon: "/images/home/faq/icon-07.webp" },
+  { name: "所有問題", icon: "/apps/images/home/faq/icon-01.webp" },
+  { name: "開始使用", icon: "/apps/images/home/faq/icon-02.webp" },
+  { name: "物品管理", icon: "/apps/images/home/faq/icon-03.webp" },
+  { name: "購物清單", icon: "/apps/images/home/faq/icon-04.webp" },
+  { name: "家庭共享", icon: "/apps/images/home/faq/icon-05.webp" },
+  { name: "帳號與同步", icon: "/apps/images/home/faq/icon-06.webp" },
+  { name: "其他", icon: "/apps/images/home/faq/icon-07.webp" },
 ];
 
 const faqs: FaqItem[] = [
@@ -273,15 +273,15 @@ export default function HomeFaqPage() {
   return (
     <main className="faq-page">
       <header className="faq-header">
-        <a className="faq-brand" href="/">
+        <a className="faq-brand" href="/apps">
           Eagle 🪽
         </a>
 
         <nav>
-          <a href="/apps">Apps</a>
-          <a href="/about">關於我</a>
-          <a href="/blog">部落格</a>
-          <a className="active" href="/support">
+          <a href="/apps/apps">Apps</a>
+          <a href="/apps/about">關於我</a>
+          <a href="/apps/blog">部落格</a>
+          <a className="active" href="/apps/support">
             支援
           </a>
         </nav>
@@ -316,7 +316,7 @@ export default function HomeFaqPage() {
 
           <div className="faq-hero-art">
             <img
-              src="/images/home/faq/faq-hero.webp"
+              src="/apps/images/home/faq/faq-hero.webp"
               alt="比熊閱讀家庭神器 FAQ"
             />
           </div>
@@ -375,7 +375,7 @@ export default function HomeFaqPage() {
 
                   <span className="faq-question-art">
                     <img
-                      src={`/images/home/faq/q-${number}.webp`}
+                      src={`/apps/images/home/faq/q-${number}.webp`}
                       alt=""
                       aria-hidden="true"
                     />
@@ -401,7 +401,7 @@ export default function HomeFaqPage() {
         <section className="faq-contact">
           <img
             className="faq-contact-dog"
-            src="/images/home/faq/footer-dog.webp"
+            src="/apps/images/home/faq/footer-dog.webp"
             alt=""
             aria-hidden="true"
           />
@@ -428,7 +428,7 @@ export default function HomeFaqPage() {
 
           <img
             className="faq-contact-plant"
-            src="/images/home/faq/footer-plant.webp"
+            src="/apps/images/home/faq/footer-plant.webp"
             alt=""
             aria-hidden="true"
           />

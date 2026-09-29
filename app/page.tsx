@@ -3,10 +3,10 @@ export default function Home() {
     <main className="site-shell">
       <header className="site-header">
         <nav className="main-nav" aria-label="主要導覽">
-          <a href="/about">Apps</a>
-          <a href="/about">關於我</a>
-          <a href="/story">部落格</a>
-          <a href="/support">支援</a>
+          <a href="/apps/about">Apps</a>
+          <a href="/apps/about">關於我</a>
+          <a href="/apps/story">部落格</a>
+          <a href="/apps/support">支援</a>
         </nav>
 
         <a className="follow-button" href="#follow">
@@ -32,7 +32,7 @@ export default function Home() {
             女生。
           </p>
 
-          <a className="primary-button" href="/about">
+          <a className="primary-button" href="/apps/about">
             認識我 →
           </a>
         </div>
@@ -40,7 +40,7 @@ export default function Home() {
         <div className="hero-art" aria-label="Eagle 與綿花糖">
           <img
             className="hero-illustration"
-            src="/images/eagle-hero-bar04.png"
+            src="/apps/images/eagle-hero-bar04.png"
             alt="Eagle 與綿花糖在創作桌前"
           />
         </div>
@@ -48,11 +48,11 @@ export default function Home() {
 
       <section className="app-strip" aria-label="Eagle Apps">
         {[
-          ["/images/apps/home.webp", "家庭神器"],
-          ["/images/apps/get-ready.webp", "出門神器"],
-          ["/images/apps/baby.webp", "爸媽神器"],
-          ["/images/apps/arrow-bar.webp", "Arrow Bar"],
-          ["/images/apps/word-search.webp", "Word Search"],
+          ["/apps/images/apps/home.webp", "家庭神器"],
+          ["/apps/images/apps/get-ready.webp", "出門神器"],
+          ["/apps/images/apps/baby.webp", "爸媽神器"],
+          ["/apps/images/apps/arrow-bar.webp", "Arrow Bar"],
+          ["/apps/images/apps/word-search.webp", "Word Search"],
         ].map(([icon, name]) => (
           <div className="mini-app" key={name}>
             <img className="mini-app-icon" src={icon} alt="" />

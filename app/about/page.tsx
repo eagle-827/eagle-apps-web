@@ -2,18 +2,18 @@ export default function AboutPage() {
   return (
     <main className="about-page">
       <header className="site-header about-header">
-        <a className="about-brand" href="/">
+        <a className="about-brand" href="/apps">
           Eagle ♡
         </a>
 
         <nav className="main-nav" aria-label="主要導覽">
-          <a href="/apps">Apps</a>
-          <a className="active" href="/about">關於我</a>
-          <a href="/story">創作日常</a>
-          <a href="/support">支援</a>
+          <a href="/apps/apps">Apps</a>
+          <a className="active" href="/apps/about">關於我</a>
+          <a href="/apps/story">創作日常</a>
+          <a href="/apps/support">支援</a>
         </nav>
 
-        <a className="follow-button" href="/#follow">
+        <a className="follow-button" href="/apps/#follow">
           追蹤我 ♡
         </a>
       </header>
@@ -47,7 +47,7 @@ export default function AboutPage() {
             <div className="about-photo-group">
               <div className="about-photo-mobile">
                 <img
-                  src="/images/about/eagle.webp"
+                  src="/apps/images/about/eagle.webp"
                   alt="Eagle"
                 />
               </div>
@@ -89,22 +89,22 @@ export default function AboutPage() {
 
         <div className="life-grid">
           <div className="life-item">
-            <img className="life-icon-image" src="/images/about/life/baby.webp" alt="" />
+            <img className="life-icon-image" src="/apps/images/about/life/baby.webp" alt="" />
             <strong>照顧寶寶</strong>
           </div>
 
           <div className="life-item">
-            <img className="life-icon-image" src="/images/about/life/dog.webp" alt="" />
+            <img className="life-icon-image" src="/apps/images/about/life/dog.webp" alt="" />
             <strong>陪綿花糖</strong>
           </div>
 
           <div className="life-item">
-            <img className="life-icon-image" src="/images/about/life/cooking.webp" alt="" />
+            <img className="life-icon-image" src="/apps/images/about/life/cooking.webp" alt="" />
             <strong>煮美食</strong>
           </div>
 
           <div className="life-item">
-            <img className="life-icon-image" src="/images/about/life/love.webp" alt="" />
+            <img className="life-icon-image" src="/apps/images/about/life/love.webp" alt="" />
             <strong>和老公相愛</strong>
           </div>
         </div>
@@ -113,7 +113,7 @@ export default function AboutPage() {
       <section className="about-wish">
         <img
           className="about-wish-image"
-          src="/images/about/about-bottom.webp"
+          src="/apps/images/about/about-bottom.webp"
           alt=""
         />
         <div className="about-wish-copy">

@@ -6,7 +6,7 @@ const apps = [
     mobileDescription: "記錄收納、找失物、整理、提醒、家庭共享。",
     href: "/home",
     className: "home",
-    image: "/images/apps/cards/home-v2.webp",
+    image: "/apps/images/apps/cards/home-v2.webp",
     mobileButton: "了解更多 →",
   },
   {
@@ -16,7 +16,7 @@ const apps = [
     mobileDescription: "不再遲到．準時出門",
     href: "https://get-ready.eagleying.com",
     className: "get-ready",
-    image: "/images/apps/cards/get-ready-v2.webp",
+    image: "/apps/images/apps/cards/get-ready-v2.webp",
     mobileButton: "即將推出",
   },
   {
@@ -28,7 +28,7 @@ const apps = [
       "成長記錄、疫苗提醒\n新手父母教學\n陪寶寶每個重要時刻。",
     href: "/baby",
     className: "baby",
-    image: "/images/apps/cards/baby-v2.webp",
+    image: "/apps/images/apps/cards/baby-v2.webp",
     mobileButton: "即將推出",
   },
   {
@@ -38,7 +38,7 @@ const apps = [
     mobileDescription: "老公開發的小遊戲：\n簡單上手、短關好玩",
     href: "/arrowbar",
     className: "arrow-bar",
-    image: "/images/apps/cards/arrow-bar-v2.webp",
+    image: "/apps/images/apps/cards/arrow-bar-v2.webp",
     mobileButton: "了解更多 →",
   },
   {
@@ -48,7 +48,7 @@ const apps = [
     mobileDescription: "老公開發的小遊戲：\n世上最難的尋字遊戲！",
     href: "/word_search",
     className: "word-search",
-    image: "/images/apps/cards/word-search-v2.webp",
+    image: "/apps/images/apps/cards/word-search-v2.webp",
     mobileButton: "了解更多 →",
   },
 ];
@@ -57,17 +57,17 @@ export default function AppsPage() {
   return (
     <main className="apps-page">
       <header className="about-header apps-header">
-        <a className="about-brand" href="/">
+        <a className="about-brand" href="/apps">
           Eagle 🪽
         </a>
 
         <nav>
-          <a className="active" href="/apps">
+          <a className="active" href="/apps/apps">
             Apps
           </a>
-          <a href="/about">關於我</a>
-          <a href="/blog">部落格</a>
-          <a href="/support">支援</a>
+          <a href="/apps/about">關於我</a>
+          <a href="/apps/blog">部落格</a>
+          <a href="/apps/support">支援</a>
         </nav>
 
         <a className="follow-button" href="#">

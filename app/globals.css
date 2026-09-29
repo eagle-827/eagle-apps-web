@@ -979,7 +979,7 @@ a {
 
 @font-face {
   font-family: "ChenYuLuoYan";
-  src: url("/fonts/ChenYuluoyan-2.0-Thin.ttf") format("truetype");
+  src: url("/apps/fonts/ChenYuluoyan-2.0-Thin.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;

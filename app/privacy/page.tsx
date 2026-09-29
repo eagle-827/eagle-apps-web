@@ -200,15 +200,15 @@ export default function PrivacyPage() {
   return (
     <main className="privacy-page">
       <header className="privacy-header">
-        <a className="privacy-brand" href="/">
+        <a className="privacy-brand" href="/apps">
           Eagle 🪽
         </a>
 
         <nav>
-          <a href="/apps">Apps</a>
-          <a href="/about">關於我</a>
-          <a href="/blog">部落格</a>
-          <a className="active" href="/support">
+          <a href="/apps/apps">Apps</a>
+          <a href="/apps/about">關於我</a>
+          <a href="/apps/blog">部落格</a>
+          <a className="active" href="/apps/support">
             支援
           </a>
         </nav>
@@ -241,7 +241,7 @@ export default function PrivacyPage() {
 
           <div className="privacy-hero-art">
             <img
-              src="/images/privacy/hero.webp"
+              src="/apps/images/privacy/hero.webp"
               alt="Apps by Eagle 隱私權政策"
             />
           </div>
@@ -271,7 +271,7 @@ export default function PrivacyPage() {
 
                   <span className="privacy-question-art">
                     <img
-                      src={`/images/privacy/q-${number}.webp`}
+                      src={`/apps/images/privacy/q-${number}.webp`}
                       alt=""
                       aria-hidden="true"
                     />
