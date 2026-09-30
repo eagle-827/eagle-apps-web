@@ -223,32 +223,6 @@
     pointer-events: none;
   }
 
-  .eagle-mobile-apps-toggle {
-    width: 100%;
-    padding: 14px 6px;
-    border: 0;
-    border-bottom: 1px solid rgba(226, 207, 198, 0.45);
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #665650;
-    font: inherit;
-    font-size: 15px;
-    text-align: left;
-    cursor: pointer;
-  }
-
-  .eagle-submenu-chevron {
-    margin-right: 4px;
-    font-size: 18px;
-    transition: transform 0.2s ease;
-  }
-
-  .eagle-mobile-apps-toggle.open .eagle-submenu-chevron {
-    transform: rotate(180deg);
-  }
-
   .eagle-apps-submenu {
     display: none;
     padding: 3px 0 5px 14px;

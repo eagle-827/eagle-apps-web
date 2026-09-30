@@ -15,7 +15,6 @@ const navItems = [
 export default function SiteHeader() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [appsOpen, setAppsOpen] = useState(false);
 
   const isActive = (href: string) => {
     if (href === "/apps") return pathname === "/apps" || pathname === "/apps/";
@@ -92,23 +91,18 @@ export default function SiteHeader() {
             關於我
           </a>
 
-          <button
-            type="button"
-            className={`eagle-mobile-apps-toggle${appsOpen ? " open" : ""}`}
-            aria-expanded={appsOpen}
-            onClick={() => setAppsOpen((open) => !open)}
+          <a
+            href="/apps/apps"
+            className={isActive("/apps/apps") ? "active" : undefined}
+            onClick={() => setMenuOpen(false)}
           >
-            <span>Apps</span>
-            <span className="eagle-submenu-chevron">⌄</span>
-          </button>
+            Apps
+          </a>
 
-          <div className={`eagle-apps-submenu${appsOpen ? " open" : ""}`}>
+          <div className="eagle-apps-submenu open">
             <a
               href="/apps/home"
-              onClick={() => {
-                setAppsOpen(false);
-                setMenuOpen(false);
-              }}
+              onClick={() => setMenuOpen(false)}
             >
               家庭神器
             </a>

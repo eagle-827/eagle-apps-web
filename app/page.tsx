@@ -6,7 +6,7 @@ export default function Home() {
 
       <section className="hero">
         <div className="hero-copy">
-          <p className="eyebrow">Apps by Eagle</p>
+
 
           <h1>
             讓生活簡單一點，
@@ -21,10 +21,6 @@ export default function Home() {
             <br />
             女生。
           </p>
-
-          <a className="primary-button" href="/apps/about">
-            認識我 →
-          </a>
         </div>
 
         <div className="hero-art" aria-label="Eagle 與綿花糖">

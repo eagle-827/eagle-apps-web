@@ -7,7 +7,7 @@ export default function AboutPage() {
       <section className="about-intro">
         <div className="about-copy">
           <h1>
-            <span className="about-hi">Hi，</span><span className="about-title-zh">我是</span>{" "}
+            <span className="about-hi">Hi，</span><span className="about-title-zh">我是依糕</span>
             <span className="about-eagle">eagle</span>
           </h1>
 

@@ -1196,3 +1196,8 @@ a {
   font-family: "ChenYuLuoYan", "PingFang TC", sans-serif;
   font-weight: 400;
 }
+
+/* About — center life section title */
+.about-life h2 {
+  text-align: center;
+}
