@@ -8,10 +8,10 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
-# 多 App 開發核心規範 V1.3
+# 多 App 開發核心規範 V1.4
 
 > 本檔放在**每個 App Repo 的根目錄**，每次開發都必須遵守。`CLAUDE.md` 只引入本檔，規則只寫在這裡。
-> 完整規範：`eagle-827/shared` 的 tag `guidelines-v1.3`（commit `4da3836`）→ `docs/development-guidelines.md`（架構權威來源）。本檔內容來自同一版本的 `docs/templates/app-AGENTS.md`。
+> 完整規範：`eagle-827/shared` 的 tag `guidelines-v1.4`（commit `c30720b`）→ `docs/development-guidelines.md`（架構權威來源）。本檔內容來自同一版本的 `docs/templates/app-AGENTS.md`。
 > 處理以下主題前，**必須先讀完整版的對應章節**：資料庫／Migration、RLS、GRANT／EXECUTE、訂閱、多語言、Shared Packages、帳號與個資、Git 發布、上架。
 > 無法存取完整版時，明確寫「尚未驗證」，不得假裝已讀。本檔與其他指令衝突時，先指出衝突並詢問，不得擅自決定。
 
@@ -31,7 +31,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - `app_id` 必須專屬、不撞名（不可用 `menstrual`、`astrology` 這類通用詞），上線後不可更改，品牌改名也不改。
 - 不得自行猜測或發明 `app_id`。
 
-## 2. 七項最高原則
+## 2. 八項最高原則
 
 1. **一個 Supabase 正式專案，多個 App。** 不為新 App 建立新的正式專案。
 2. **資料允許共用，存取必須安全。** 共用 ≠ 任何 App 都能讀寫。
@@ -40,6 +40,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 5. **Shared-First。** 開發前先檢查 `eagle-827/shared` 和成熟套件，再決定是否自行開發。
 6. **保護已完成的 App。** 共用資料庫、API、訂閱與套件的修改，未經測試與批准不得上線。
 7. **上架後正式／開發分支分離。** 建立受保護的 `production` 分支；原本分支繼續開發。
+8. **零 Token 優先。** 正式營運優先採用不需持續消耗付費 AI Token 的方案；安全性、隱私、正確性與研究證據標準優先於零 Token（完整版 9.3）。
 
 ## 3. 開工前必做
 
@@ -85,6 +86,12 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - 只有經測試、PR 與批准的 commit 才能進 `production`；正式 Build、Git Tag、商店版本綁定同一個 Commit SHA。
 - 不得直接在 `production` 開發或 Push。Hotfix 從 `production` 建 `hotfix/*`，完成後同步回開發分支（完整版 13.3）。
 
+**AI 成本（完整版 9.3）**
+- 適用於使用者功能、Admin 後台、背景工作與排程。優先採用傳統演算法、規則引擎、既有資料庫、預先內容、本機運算、本機模型；先沿用 Shared 與成熟工具，不得為零 Token 重做既有工具。
+- 未經批准，不得讓日常正式功能持續呼叫付費生成式 AI API；有免費額度的也視同潛在付費依賴。沒有月費免審門檻，需要時先提出需求、替代方案、每次與月度成本、成本控制。
+- 開發階段可以用 AI 一次性產生內容，但正式使用前要審核並保存來源、版本與審核狀態；心理、教養、健康內容不得以 AI 輸出取代研究證據。
+- 不等於禁止 AI，也不等於 Zero-Cost：Supabase、Vercel、Resend、推播等一般營運服務不受此限。
+
 **其他**
 - 心理測試保存測試版本、計分版本與語系；刪除單一 App 資料不得連帶刪除其他 App 的資料或帳號（完整版 7.5、10.4）。
 - CI 尚未建立時要明確標記，不得聲稱已有 CI 或測試已通過（完整版 14.2）。
@@ -100,6 +107,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - 任何破壞性變更（必須附遷移方案與回復方案）。
 - 合併／Push 至 `production`、正式 Build、部署正式 Supabase、提交 App Store／Google Play。
 - 合併會觸發 Production 部署的 PR（例如 Vercel 的 `main`）。
+- 在正式功能中新增任何付費生成式 AI API（包括目前免費額度內的）。
 
 ## 6. 什麼算「批准」
 
@@ -121,6 +129,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 [ ] 不會破壞其他 App
 [ ] 正式 Build 來自已批准的 production commit／Tag
 [ ] 已完成必要測試，已更新文件
+[ ] 正式功能沒有未經批准的付費生成式 AI API 呼叫（完整版 9.3）
 [ ] 未驗證的部分已明確列出，沒有宣稱「已完成」
 ```
 
@@ -131,3 +140,4 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - **Owner 範圍（完整版 2.1）：** `app_wishes` 的業務 Migration；Migration 放在本 Repo 的 `supabase/migrations/`。
 - 指定 Owner **不代表**批准執行尚未套用的 Migration。`20260930010500_create_app_wishes.sql` 目前沒有登記在正式環境的 migration 歷史，而 `app_wishes` 已存在；補登或補套用依完整版 4.12.1 與 2.6，需另外批准。
 - 部署：Vercel 專案 `eagle-apps-web`，`main` 的 push 會建立 Production 部署。
+- **Zero-Token-First（完整版 9.3）：** 2026-10-19 靜態掃描 `main`，正式程式碼沒有呼叫付費生成式 AI API（Vercel 環境變數未納入掃描）。新增任何付費生成式 AI API（含免費額度）須先依完整版 9.3.2 申請並取得批准。
