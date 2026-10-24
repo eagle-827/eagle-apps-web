@@ -8,11 +8,11 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
-# 多 App 開發核心規範 V1.4
+# 多 App 開發核心規範 V1.6
 
 > 本檔放在**每個 App Repo 的根目錄**，每次開發都必須遵守。`CLAUDE.md` 只引入本檔，規則只寫在這裡。
-> 完整規範：`eagle-827/shared` 的 tag `guidelines-v1.4`（commit `c30720b`）→ `docs/development-guidelines.md`（架構權威來源）。本檔內容來自同一版本的 `docs/templates/app-AGENTS.md`。
-> 處理以下主題前，**必須先讀完整版的對應章節**：資料庫／Migration、RLS、GRANT／EXECUTE、訂閱、多語言、Shared Packages、帳號與個資、Git 發布、上架。
+> 完整規範：`eagle-827/shared` 的 tag `guidelines-v1.6`（commit `cb66b1b`）→ `docs/development-guidelines.md`（架構權威來源）。本檔內容來自同一版本的 `docs/templates/app-AGENTS.md`。
+> 處理以下主題前，**必須先讀完整版的對應章節**：資料庫／Migration、RLS、GRANT／EXECUTE、訂閱、多語言、Shared Packages、帳號與個資、Git 發布、上架、圖片素材、開發成果備份。
 > 無法存取完整版時，明確寫「尚未驗證」，不得假裝已讀。本檔與其他指令衝突時，先指出衝突並詢問，不得擅自決定。
 
 ---
@@ -92,6 +92,22 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - 開發階段可以用 AI 一次性產生內容，但正式使用前要審核並保存來源、版本與審核狀態；心理、教養、健康內容不得以 AI 輸出取代研究證據。
 - 不等於禁止 AI，也不等於 Zero-Cost：Supabase、Vercel、Resend、推播等一般營運服務不受此限。
 
+**圖片素材（完整版 11.4）**
+- 新增圖片素材、建立新頁面或修改圖片顯示方式時，同一個變更內完成格式、解析度、檔案大小與顯示品質檢查；不得留到 App 完成後才處理。
+- 正式點陣圖片以 WebP 交付（含透明素材，保留 Alpha）；PNG 作為母檔與例外，母檔不得覆蓋。不得為了用 WebP 而犧牲畫質或增加不必要的檔案大小；合理例外要記錄原因與比較數據。
+- 目標尺寸 = 實際顯示尺寸 × DPR，並依用途與裝置測試決定；同時避免過大與過小。不得一律用最高 DPR，也不得用單一通用解析度。
+- 不改變視覺內容的技術性最佳化（轉 WebP、壓縮、保留透明度、等比縮放、多解析度版本、尺寸／DPR 檢查、報告）不需每批申請；修改內容、構圖、元素、風格或色彩、重新生成、可能損失內容的裁切，都要先批准。
+- 先沿用既有圖片工具（Shared-first），使用固定版本，工具更新不得意外改變既有輸出；不得重複建立相同功能的轉換工具；不合格素材不得進入正式發布版本；既有素材未經評估不得大量替換。
+
+**開發成果備份（完整版 13.6）**
+- 正式位置 `<BACKUP_ROOT>/<repo-name>/YYYYMMDD-<label>/`；預設 macOS／Linux `$HOME/backup`、Windows `%USERPROFILE%\backup`。`Downloads`、桌面與雲端工作目錄只能暫存。既有備份目錄不必改名或搬移。
+- 階段驗收、高風險操作前、重要開發成果交接前、正式發布後建立備份。普通 AI 工作交接：成果都已提交並 Push、本機沒有未保存成果時不必重新備份，交接文件寫明 Commit SHA 即可；無法確認時視為重要交接。
+- Git Bundle 須由非 shallow clone 以 `--all` 建立，但**不涵蓋**未提交變更、較舊的 Stash、LFS、Submodule、試算表、知識庫、文件、Repo 外的母檔與 Unity 必要檔案；這些另行保存或在 Manifest 列為排除並寫明原因。Stash 只以 `git stash list`／`git stash show -p` 唯讀盤點與匯出，不得 pop、apply、drop 或修改。
+- A 保存、B 完整性驗證（`git bundle verify`、SHA-256）、C 第二份獨立備份（獨立於第一份的主要故障風險）、D 還原測試（首次、每季、重大變更後，在隔離環境）分別記錄；不得因為有 Bundle 或 ZIP 就宣稱備份完成，沒做的寫「尚未驗證」。
+- 不得清除或覆蓋工作目錄（不用 `git stash`／`clean`／`reset`／`checkout`），不建立或移動 Branch／Tag，不 Push；只新增、不覆寫。
+- 不得放入金鑰、正式憑證、正式資料庫匯出或使用者資料。含 Git 歷史的備份對外傳送前，先以 gitleaks（或事先核准的等效工具）掃描完整歷史並評估敏感資料。
+- 每份備份附簡潔的 `MANIFEST.md` 與 `SHA256SUMS`（`SHA256SUMS` 不計算自身；Manifest 更新後只重算它自己那一行）。
+
 **其他**
 - 心理測試保存測試版本、計分版本與語系；刪除單一 App 資料不得連帶刪除其他 App 的資料或帳號（完整版 7.5、10.4）。
 - CI 尚未建立時要明確標記，不得聲稱已有 CI 或測試已通過（完整版 14.2）。
@@ -108,6 +124,8 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - 合併／Push 至 `production`、正式 Build、部署正式 Supabase、提交 App Store／Google Play。
 - 合併會觸發 Production 部署的 PR（例如 Vercel 的 `main`）。
 - 在正式功能中新增任何付費生成式 AI API（包括目前免費額度內的）。
+- 改變圖片視覺內容：修改角色或插畫、改變構圖、增刪元素、改變風格或色彩、重新生成、可能損失重要內容的裁切；批次替換既有素材（完整版 11.4.4、11.4.7）。
+- 刪除、覆寫、搬移、重新命名或輪替任何備份，或設定自動刪除；上傳備份到第三方雲端（含同步資料夾）；使用 gitleaks 以外的秘密掃描工具；使用預設以外的正式備份位置（完整版 13.6）。
 
 ## 6. 什麼算「批准」
 
@@ -130,6 +148,8 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 [ ] 正式 Build 來自已批准的 production commit／Tag
 [ ] 已完成必要測試，已更新文件
 [ ] 正式功能沒有未經批准的付費生成式 AI API 呼叫（完整版 9.3）
+[ ] 新增或變更的圖片已通過完整版 11.4 檢查，母檔已保留，並附最佳化報告
+[ ] 階段成果已依完整版 13.6 備份；Manifest 已記錄範圍、排除項目、A／B／C／D 狀態與安全檢查
 [ ] 未驗證的部分已明確列出，沒有宣稱「已完成」
 ```
 
